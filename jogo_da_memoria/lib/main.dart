@@ -29,22 +29,22 @@ class _HomeState extends State<Home> {
   Carta? cartSel;
   bool comparando = false;
 
-  final List<List<Carta>>  _baralho = [
+  final List<List<Carta>> _baralho = [
     [
-      Carta(color: Colors.orange),
-      Carta(color: Colors.blue),
-      Carta(color: Colors.green),
-      Carta(color: Colors.yellow),
-    ],[
-      Carta(color: Colors.cyan),
       Carta(color: Colors.red),
-      Carta(color: Colors.red),
-      Carta(color: Colors.green),
+      Carta(color: Colors.blueAccent),
+      Carta(color: Colors.yellowAccent),
+      Carta(color: Colors.purple),
     ],[
-      Carta(color: Colors.cyan),
-      Carta(color: Colors.blue),
-      Carta(color: Colors.orange),
-      Carta(color: Colors.yellow),
+      Carta(color: Colors.green),
+      Carta(color: Colors.indigo),
+      Carta(color: Colors.purple),
+      Carta(color: Colors.red),
+    ],[
+      Carta(color: Colors.blueAccent),
+      Carta(color: Colors.green),
+      Carta(color: Colors.yellowAccent),
+      Carta(color: Colors.indigo),
     ]
   ];
 
@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
       comparando = true;
       setState(() {
       });
-      await Future.delayed(Duration(milliseconds: 500));
+      await Future.delayed(Duration(milliseconds: 300));
 
       if(carta.color == cartSel!.color){
         carta.match = true;
